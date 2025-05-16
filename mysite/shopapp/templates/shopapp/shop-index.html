@@ -1,0 +1,48 @@
+{% extends 'shopapp/base.html' %}
+{% load cache %}
+
+{% block title %}
+  Shop Index
+{% endblock %}
+
+
+{% block body %}
+  <h1>Hello Shop Index!</h1>
+  <div>
+      <ul>
+          {% for name, price, description in products %}
+              <li> {{ forloop.counter }}. {{ name }} for ${{ price }}</li>
+
+              <span>Is name length 7?
+              {% if name|length == 7 %}Yes{% else %}No{% endif %}
+              </span>
+
+              <p>Name in lowercase: {{ name|lower }}</p>
+
+              <p>Description:</p>
+              <pre>{{ description|linenumbers }}</pre>
+
+          {% empty %}
+              No products here
+          {% endfor %}
+      </ul>
+  </div>
+
+  <div>
+    <strong>
+      {% comment %} You have {{ items }} item{{ items|pluralize }} {% endcomment %}
+      {% comment %} You have {{ items }} class{{ items|pluralize:"es" }} {% endcomment %}
+      You have {{ items }} cherr{{ items|pluralize:"y,ies" }}
+    </strong>
+  </div>
+
+  <div>
+    Time running: {{ time_running }}
+  </div>
+  {% cache 60 lorem %}
+  <div>
+    {% lorem 3 p random %}
+  </div>
+  {% endcache %}
+
+{% endblock %}
