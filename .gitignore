@@ -135,3 +135,5 @@ dmypy.json
 .idea/
 
 .vscode/
+
+shop_env_py_3_12/
