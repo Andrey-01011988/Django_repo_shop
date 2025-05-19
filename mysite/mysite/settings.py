@@ -112,8 +112,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': DATABASE_DIR / 'db_20.sqlite3',
-        'NAME': BASE_DIR / 'db_20.sqlite3',
+        'NAME': DATABASE_DIR / 'db_20.sqlite3',
+        # 'NAME': BASE_DIR / 'db_20.sqlite3',
     }
 }
 
@@ -167,6 +167,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # сюда будет собираться статика командой collectstatic
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'

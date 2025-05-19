@@ -1,0 +1,46 @@
+{
+    "cSpell.words": [
+        "blogapp",
+        "endcomment",
+        "endfor",
+        "firstof",
+        "forloop",
+        "mysite",
+        "promocode",
+        "Pupkina",
+        "shopapp"
+    ],
+    "files.associations": {
+        "**/templates/**/*.html": "django-html",
+        "**/blogapp/templates/**/*.html": "django-html"
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "/home/uservm/PycharmProjects/Django_repo_shop/shop_env_py_3_12/bin/python",
+    "python.analysis.extraPaths": [
+        "/home/uservm/PycharmProjects/Django_repo_shop/shop_env_py_3_12/lib/python3.12/site-packages"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/home/uservm/PycharmProjects/Django_repo_shop/shop_env_py_3_12/lib/python3.12/site-packages"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoSearchPaths": true,
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[django-html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.useLibraryCodeForTypes": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    }
+}

@@ -1,21 +1,18 @@
-[project]
+[tool.poetry]
 name = "django-repo-shop"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "uservm",email = "example@mail.com"}
-]
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "django (>=5.2.1,<6.0.0)",
-    "djangorestframework (>=3.16.0,<4.0.0)",
-    "django-filter (>=25.1,<26.0)",
-    "django-debug-toolbar (>=5.2.0,<6.0.0)",
-    "pillow (>=11.2.1,<12.0.0)",
-    "gunicorn (>=23.0.0,<24.0.0)"
-]
+authors = ["uservm <example@mail.com>"]
+packages = [{ include = "mysite" }]
 
+[tool.poetry.dependencies]
+python = ">=3.12"
+django = ">=5.2.1,<6.0.0"
+djangorestframework = ">=3.16.0,<4.0.0"
+django-filter = ">=25.1,<26.0"
+django-debug-toolbar = ">=5.2.0,<6.0.0"
+pillow = ">=11.2.1,<12.0.0"
+gunicorn = ">=23.0.0,<24.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

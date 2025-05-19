@@ -17,6 +17,6 @@ services:
       driver: "json-file"
       options:
         max-size: "200k"
-        max-files: "10"
+        max-file: "10"
     volumes:
       - ./mysite/database:/app/database

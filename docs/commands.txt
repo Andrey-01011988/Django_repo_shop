@@ -1,0 +1,42 @@
+pip install poetry
+
+poetry init
+
+This command will guide you through creating your pyproject.toml config.
+
+Package name [my-existing-project]: 
+Version [0.1.0]: 
+Description []: Пример проекта с Poetry
+Author [Ваше Имя <email@example.com>, n to skip]: 
+License []: MIT
+Compatible Python versions [^3.8]: 
+
+Would you like to define your dependencies (require) interactively? (yes/no) [yes]: no
+
+Search for package to add (leave blank to continue): requests
+Enter the version constraint to require (or leave blank to use the latest): ^2.28.0
+
+Search for package to add (leave blank to continue): 
+
+Would you like to define your dev dependencies (require-dev) interactively? (yes/no) [yes]: no
+
+Do you confirm generation? (yes/no) [yes]: yes
+
+
+poetry add django djangorestframework
+
+poetry add django-filter django-debug-toolbar pillow gunicorn
+
+poetry install
+
+poetry add "django@4.2.0"
+
+docker compose build app
+
+docker compose up app
+
+docker-compose exec app python manage.py migrate
+
+docker-compose exec app python manage.py createsuperuser
+
+docker-compose exec app python manage.py loaddata shopapp-fixtures.json
