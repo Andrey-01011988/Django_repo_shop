@@ -1,0 +1,75 @@
+Команды выполнить после подключения к удаленному серверу
+
+подключение к серверу:
+ssh -i <путь_к_ключу> -p 2022 <имя_пользователя>@<публичный_IP>
+
+Список установленных пакетов через apt:
+apt list --installed
+
+Список установленных пакетов через dpkg:
+dpkg --list
+
+Список установленных snap-пакетов (если используются):
+snap list
+
+Просмотр запущенных служб (демонов):
+systemctl list-units --type=service --state=running
+
+Просмотр всех процессов:
+ps aux
+    Выход:
+    q
+
+Установка Docker:
+sudo apt update
+sudo apt install docker.io docker-compose
+
+    Запуск демона Docker и настройка его автозапуска при загрузке ОС
+    sudo systemctl enable --now docker
+
+    Проверка статуса Docker:
+    systemctl status docker
+
+    Выход:
+    q
+
+Установка Git на сервере:
+sudo apt install git
+
+Клонирование репозитория на сервер
+git clone https://github.com/Andrey-01011988/Django_repo_shop.git
+
+Обновление проекта (опционально)
+cd Django_repo_shop
+git pull
+
+Увидеть все файлы и папки в проекте:
+~/Django_repo_shop# ls -a
+
+Создание .env с указанными полями:
+~/Django_repo_shop# cp .env.template .env
+
+Заполнение .env:
+~/Django_repo_shop# nano .env
+    После заполнения всех полей:
+    lCtrl + O - сохранить изменения в файле
+    Enter - сохранить не переименовывая
+    lCtrl + X - выйти в панель управления
+
+Сборка и запуск контейнера с приложением:
+
+    Установка Docker Compose автономно:
+    Скачайте бинарник:
+    sudo curl -SL https://github.com/docker/compose/releases/download/v2.36.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+    Сделайте файл исполняемым:
+    sudo chmod +x /usr/local/bin/docker-compose
+
+    Так как установлен бинарник, то команда для сборки:
+    ~/Django_repo_shop# docker-compose build app
+    Превышен лимит скачивания с Docker Hub
+
+    Запуск контейнера:
+    ~/Django_repo_shop# docker-compose up -d
+
+Продукты, заказы и пользователи загрузились из базы данных, они сохранились во время тестового запуска контейнеров и заполнения б/д на локальной машине
+Приложение работает на удаленном сервере.
